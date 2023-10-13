@@ -167,3 +167,4 @@ renv.lock
 .DS_Store
 *~
 *#
+data/*
