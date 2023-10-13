@@ -164,3 +164,6 @@ renv.lock
 
 # shinytest
 /shinytest/
+.DS_Store
+*~
+*#
