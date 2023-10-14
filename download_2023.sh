@@ -1,7 +1,9 @@
 #!/bin/bash
 
+DIR="./data"
+
 # Create the data directory if it doesn't exist
-mkdir -p ./data
+mkdir -p $DIR
 
 # List of URLs to download
 urls=(
@@ -21,4 +23,14 @@ urls=(
 for url in "${urls[@]}"; do
     # Use curl to download the file and save it to the ./data directory
     curl -L -o "./data/$(basename "$url")" "$url"
+done
+
+# Navigate to the source directory
+cd "$DIR"
+
+DEST_DIR="./xml"
+mkdir -p "$DEST_DIR"
+# Unzip each .zip file to the destination directory
+for file in *.zip; do
+    unzip "$file" -d "$DEST_DIR"  # Extract files into ./data/xml
 done
