@@ -24,6 +24,7 @@ I only covered half the topics as I split it with another alumnus. The repo is a
 docker-compose spark/docker-compose.yml up
 ```
 to launch it.
+
 3. Build the docker `docker build --rm -t my_docker ./docker`
 4. Start the docker `docker run  --network="host" -v ./r:/app -it my_docker`
 5. Play with the data as desired.  There are some examples in r/spark_exploration.
