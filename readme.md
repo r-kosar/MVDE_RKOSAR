@@ -18,12 +18,16 @@ I only covered half the topics as I split it with another alumnus. The repo is a
 3. The point of these files is to show that there are low-effort ways to greatly speed up parsing, not to be exemplary parsing code.
 
 # Further analysis using spark
-1. Run
-```curl -L -o ./spark/docker-compose.yml  https://raw.githubusercontent.com/bitnami/containers/main/bitnami/spark/docker-compose.yml to download a standalone spark implementation```
-2. Run 'docker-compose spark/docker-compose.yml up
-```
-  to launch it.
+##  Download standalone spark
+```curl -L -o ./spark/docker-compose.yml  https://raw.githubusercontent.com/bitnami/containers/main/bitnami/spark/docker-compose.yml```
 
-3. Build the docker `docker build --rm -t my_docker ./docker`
-4. Start the docker `docker run  --network="host" -v ./r:/app -it my_docker`
-5. Play with the data as desired.  There are some examples in r/spark_exploration.
+## Launch a local standalone spark cluster
+```docker-compose spark/docker-compose.yml up```
+
+## Build an analysis docker
+```docker build --rm -t my_docker ./docker```
+
+## Start the analysis docker
+```docker run  --network="host" -v ./r:/app -it my_docker```
+
+The data will be in the app directory Play with the data as desired.  There are some examples in r/spark_exploration.
