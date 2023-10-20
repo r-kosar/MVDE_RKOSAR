@@ -31,3 +31,4 @@ I only covered half the topics as I split it with another alumnus. The repo is a
 ```docker run  --network="host" -v ./r:/app -it my_docker```
 
 The data will be in the app directory Play with the data as desired.  There are some examples in r/spark_exploration.
+
