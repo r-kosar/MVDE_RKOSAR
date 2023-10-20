@@ -168,3 +168,4 @@ renv.lock
 *~
 *#
 data/*
+*.csv
